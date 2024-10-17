@@ -142,7 +142,7 @@ class DetailScreen extends StatelessWidget {
                             onTap: () {
                               // Tambahkan logika untuk memperbesar gambar di sini
                             },
-                           child:Container( 
+                            child:Container( 
                               decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               border:Border.all(
@@ -165,6 +165,7 @@ class DetailScreen extends StatelessWidget {
                                 errorWidget: (context, url, error) => const Icon(Icons.error),
                               ),
                             ),
+                          ),
                           ),
                         );
                       },
