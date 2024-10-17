@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wiget_dasar2/data/candi_data.dart';
-import 'package:wiget_dasar2/screens/detail_screen.dart';
+import 'package:widget_dasar_flutter2/data/candi_data.dart';
+import 'screens/detail_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,12 +12,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Flutter Demo",
+      title: 'flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: DetailScreen(candi: candiList[0]), 
+      home: DetailScreen(candi: candiList[0]),
     );
   }
 }
