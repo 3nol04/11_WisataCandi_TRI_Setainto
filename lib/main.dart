@@ -5,6 +5,7 @@ import 'package:widget_dasar_flutter2/screens/sing_in_screen.dart';
 import 'package:widget_dasar_flutter2/screens/singup_screen.dart';
 import 'screens/detail_screen.dart';
 import 'package:widget_dasar_flutter2/screens/search_screen.dart';
+import 'package:widget_dasar_flutter2/screens/home_screen.dart';
 void main() {
   runApp(const MainApp());
 }
@@ -25,7 +26,8 @@ class MainApp extends StatelessWidget {
       //home : const ProfileScreen()
      // home:  Sing_inScreen(),
       //home:  SingUpScreen(),
-      home:  SearchScreen(),
+      //home:  SearchScreen(),
+      home: Home_Screen(),
     );
   }
 }
