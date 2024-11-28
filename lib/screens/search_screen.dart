@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:widget_dasar_flutter2/models/candi.dart';
-import 'package:widget_dasar_flutter2/data/candi_data.dart';
+import '../models/candi.dart';
+import '../data/candi_data.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

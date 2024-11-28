@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:widget_dasar_flutter2/models/candi.dart';
-import 'package:widget_dasar_flutter2/screens/detail_screen.dart';
+import '../models/candi.dart';
+import '../screens/detail_screen.dart';
 
 class ItemCard extends StatelessWidget {
   final Candi candi;
@@ -9,9 +9,18 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(candi: candi),
+          ),
+        );
+      },
+      child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        margin:const EdgeInsets.all(4),
+        margin: const EdgeInsets.all(4),
         elevation: 1,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +36,7 @@ class ItemCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 8 , left: 16),
+              padding: const EdgeInsets.only(top: 8, left: 16),
               child: Text(
                 candi.name,
                 style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -41,6 +50,8 @@ class ItemCard extends StatelessWidget {
               ),
             ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

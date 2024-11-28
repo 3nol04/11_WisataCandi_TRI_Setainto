@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:widget_dasar_flutter2/screens/item_card.dart';
+import '../screens/item_card.dart';
+import '../data/candi_data.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});
@@ -9,7 +10,7 @@ class Home_Screen extends StatefulWidget {
 }
 
 class _Home_ScreenState extends State<Home_Screen> {
-  final List candiList = []; // Tambahkan data di sini
+  // Mengambil data dari candi_data.dart
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,7 @@ class _Home_ScreenState extends State<Home_Screen> {
       appBar: AppBar(
         title: const Text("Wisata Candi"),
       ),
+    
       body: GridView.builder(
         itemCount: candiList.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -24,9 +26,12 @@ class _Home_ScreenState extends State<Home_Screen> {
           crossAxisSpacing: 4.0,
           mainAxisSpacing: 4.0,
         ),
-        itemBuilder: (context, index) => ItemCard(
-          candi: candiList[index],
-        ),
+        itemBuilder: (context, index) {
+          final candi = candiList[index];
+          return ItemCard(
+            candi: candi,
+          );
+        },
       ),
     );
   }
